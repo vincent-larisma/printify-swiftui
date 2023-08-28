@@ -1,51 +1,61 @@
 {
   "images" : [
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_16x16x32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_32x32x32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_32x32x32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D-7 (dragged).png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D-6 (dragged) 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_256x256x32 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_256x256x32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_512x512x32 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_512x512x32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "ab4b395ba5de583d3196bd8acd8804eb_LLtZgYOf0D_1024x1024x32 2.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
