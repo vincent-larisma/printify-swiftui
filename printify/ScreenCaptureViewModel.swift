@@ -11,24 +11,33 @@ import HotKey
 
 final class ScreenCaptureViewModel: ObservableObject {
     
-    @Published var isPrintScreen: Bool = true
+    @Published var isPrintScreen: Bool      = true {
+        didSet {
+            if self.isPrintScreen {
+                hotKey = HotKey(key: .p, modifiers: [.control])
+            } else {
+                hotKey = nil
+            }
+        }
+    }
     @Published var isKeyBoardCleaning: Bool = false
     
-    let hotKey = HotKey(key: .p, modifiers: [.control])
+    @Published private var hotKey: HotKey? {
+        didSet {
+            guard let hotKey else { return }
+            
+            hotKey.keyDownHandler = { _ = self.takeScreenCapture() }
+        }
+    }
     
     init() {
-        hotKey.keyDownHandler = {
-            if self.takeScreenCapture() {
-                // success
-            } else {
-                print("failed to capture screen")
-            }
+        if self.isPrintScreen {
+            hotKey = HotKey(key: .p, modifiers: [.control])
+            hotKey?.keyDownHandler = { _ = self.takeScreenCapture() }
         }
     }
     
     func takeScreenCapture() -> Bool {
-        guard self.isValidPrintScreen() else { return false}
-        
         let task = Process()
         task.launchPath = "/usr/sbin/screencapture"
         task.arguments = ["-cs"]
@@ -37,11 +46,6 @@ final class ScreenCaptureViewModel: ObservableObject {
         let status = task.terminationStatus
         
         return status == 0
-        
-    }
-    
-    func isValidPrintScreen() -> Bool {
-        isPrintScreen == true
     }
     
 }
