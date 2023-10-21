@@ -32,7 +32,7 @@ final class ScreenCaptureViewModel: ObservableObject {
     
     init() {
         if self.isPrintScreen {
-            hotKey = HotKey(key: .p, modifiers: [.control])
+            hotKey = HotKey(key: .o, modifiers: [.control])
             hotKey?.keyDownHandler = { _ = self.takeScreenCapture() }
         }
     }

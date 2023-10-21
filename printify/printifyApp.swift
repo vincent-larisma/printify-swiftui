@@ -13,7 +13,7 @@ struct printifyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ScreenCaptureView()
+            EmptyView()
         }
     }
 }
@@ -24,6 +24,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var popover: NSPopover!
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        
+        if let window = NSApplication.shared.windows.first {
+                   window.close()
+          }
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
