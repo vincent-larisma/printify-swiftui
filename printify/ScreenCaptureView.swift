@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-
 struct ScreenCaptureView: View {
-    @StateObject var viewModel: ScreenCaptureViewModel = ScreenCaptureViewModel()
+    @ObservedObject var viewModel: ScreenCaptureViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,6 +26,7 @@ struct ScreenCaptureView: View {
             Form {
                 ToggleView(isOn: $viewModel.isPrintScreen, title: "Enable Screen Capture")
                 ToggleView(isOn: $viewModel.isKeyBoardCleaning, title: "Keyboard Cleaning")
+                    .disabled(true)
             }
             .toggleStyle(.switch)
             
@@ -38,6 +38,6 @@ struct ScreenCaptureView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ScreenCaptureView()
+        ScreenCaptureView(viewModel: ScreenCaptureViewModel())
     }
 }

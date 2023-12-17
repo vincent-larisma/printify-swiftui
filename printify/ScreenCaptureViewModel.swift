@@ -7,10 +7,10 @@
 
 import Foundation
 import HotKey
+import LaunchAtLogin
 
 
 final class ScreenCaptureViewModel: ObservableObject {
-    
     @Published var isPrintScreen: Bool      = true {
         didSet {
             if self.isPrintScreen {
@@ -32,8 +32,12 @@ final class ScreenCaptureViewModel: ObservableObject {
     
     init() {
         if self.isPrintScreen {
-            hotKey = HotKey(key: .o, modifiers: [.control])
+            hotKey = HotKey(key: .p, modifiers: [.control])
             hotKey?.keyDownHandler = { _ = self.takeScreenCapture() }
+        }
+        
+        if !LaunchAtLogin.isEnabled {
+            LaunchAtLogin.isEnabled = true
         }
     }
     

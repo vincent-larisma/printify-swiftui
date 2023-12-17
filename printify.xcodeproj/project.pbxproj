@@ -15,6 +15,7 @@
 		2C1A33312A9C77B300DAEB5D /* ScreenCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A33302A9C77B300DAEB5D /* ScreenCaptureViewModel.swift */; };
 		2CC15CA02AE36F7300624A25 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC15C9F2AE36F7300624A25 /* HotKey */; };
 		2CD80A8B2A92FFC60082EF80 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD80A8A2A92FFC60082EF80 /* ToggleView.swift */; };
+		2CED09902B2E8BE1002D0BA1 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 2CED098F2B2E8BE1002D0BA1 /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CED09902B2E8BE1002D0BA1 /* LaunchAtLogin in Frameworks */,
 				2CC15CA02AE36F7300624A25 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +151,7 @@
 			name = printify;
 			packageProductDependencies = (
 				2CC15C9F2AE36F7300624A25 /* HotKey */,
+				2CED098F2B2E8BE1002D0BA1 /* LaunchAtLogin */,
 			);
 			productName = printify;
 			productReference = 2C1856542A89139800AC0DAA /* printify.app */;
@@ -224,6 +227,7 @@
 			mainGroup = 2C18564B2A89139800AC0DAA;
 			packageReferences = (
 				2CC15C9E2AE36F7300624A25 /* XCRemoteSwiftPackageReference "HotKey" */,
+				2CED098E2B2E8BE1002D0BA1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			productRefGroup = 2C1856552A89139800AC0DAA /* Products */;
 			projectDirPath = "";
@@ -355,6 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -409,6 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -596,6 +602,14 @@
 				kind = branch;
 			};
 		};
+		2CED098E2B2E8BE1002D0BA1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -603,6 +617,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2CC15C9E2AE36F7300624A25 /* XCRemoteSwiftPackageReference "HotKey" */;
 			productName = HotKey;
+		};
+		2CED098F2B2E8BE1002D0BA1 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CED098E2B2E8BE1002D0BA1 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

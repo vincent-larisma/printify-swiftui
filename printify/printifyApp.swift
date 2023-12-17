@@ -19,11 +19,11 @@ struct printifyApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
     private var statusItem: NSStatusItem!
     private var popover: NSPopover!
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        let viewModel = ScreenCaptureViewModel()
         
         if let window = NSApplication.shared.windows.first {
                    window.close()
@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.popover = NSPopover()
             self.popover.contentSize = NSSize(width: 230, height: 130)
             self.popover.behavior = .transient
-            self.popover.contentViewController = NSHostingController(rootView: ScreenCaptureView())
+            self.popover.contentViewController = NSHostingController(rootView: ScreenCaptureView(viewModel: viewModel))
         }
     }
     
